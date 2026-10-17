@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percent — учим проценты</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ГЛАВНОЕ МЕНЮ -->
+  <section class="screen active" id="menu">
+    <h1 class="logo">PERCENT<span>%</span></h1>
+    <p class="subtitle">Выбери пример и разберись, как работают проценты</p>
+
+    <div class="menu-cards">
+      <button class="card card-standoff" data-go="standoff">
+        <div class="card-icon">🔫</div>
+        <div class="card-title">Стендофф</div>
+        <div class="card-text">Убивай врагов и смотри, сколько процентов команды осталось</div>
+      </button>
+      <button class="card card-battery" data-go="battery">
+        <div class="card-icon">🔋</div>
+        <div class="card-title">Заряд телефона</div>
+        <div class="card-text">Трать и заряжай батарею — 100 делений = 100%</div>
+      </button>
+      <button class="card card-pie" data-go="pie">
+        <div class="card-icon">🥧</div>
+        <div class="card-title">Пирог</div>
+        <div class="card-text">Режь пирог на куски и ешь — сколько процентов съедено?</div>
+      </button>
+      <button class="card card-ski" data-go="ski">
+        <div class="card-icon">⛷️</div>
+        <div class="card-title">Лыжи</div>
+        <div class="card-text">Никита идёт на лыжах 1500 км — двигай ползунок процентов</div>
+      </button>
+    </div>
+
+    <div class="rule-box">
+      <b>Главное правило:</b> 100% — это <b>всё целиком</b>.<br>
+      Процент = <span class="formula">часть ÷ всё × 100</span>
+    </div>
+  </section>
+
+  <!-- СТЕНДОФФ -->
+  <section class="screen" id="standoff">
+    <button class="back" data-go="menu">← Меню</button>
+    <h2 class="screen-title">⚔️ Стендофф: раунд на проценты</h2>
+
+    <div class="team-size">
+      <span>Врагов в команде:</span>
+      <div class="chips" id="so-sizes"></div>
+    </div>
+
+    <div class="so-arena">
+      <div class="so-player">
+        <div class="avatar avatar-ct" id="so-player-avatar">😎</div>
+        <div class="player-name">ТЫ (CT)</div>
+        <div class="kill-badge" id="so-killed">0% вражеской команды убито</div>
+      </div>
+
+      <div class="so-enemies-wrap">
+        <div class="so-hud">
+          <div class="hud-label">Вражеская команда жива</div>
+          <div class="hud-percent" id="so-alive">100%</div>
+          <div class="bar"><div class="bar-fill" id="so-bar"></div></div>
+        </div>
+        <div class="so-enemies" id="so-enemies"></div>
+        <p class="hint">👆 Кликай по врагам, чтобы их «убить»</p>
+      </div>
+
+      <div class="killfeed" id="so-feed"></div>
+    </div>
+
+    <div class="explain" id="so-explain"></div>
+    <button class="btn" id="so-reset">🔄 Новый раунд</button>
+  </section>
+
+  <!-- ЗАРЯД ТЕЛЕФОНА -->
+  <section class="screen" id="battery">
+    <button class="back" data-go="menu">← Меню</button>
+    <h2 class="screen-title">🔋 Заряд телефона</h2>
+
+    <div class="bat-layout">
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="phone-status"><span>12:00</span><span id="bat-small">100%</span></div>
+          <div class="battery">
+            <div class="battery-fill" id="bat-fill"></div>
+            <div class="battery-text" id="bat-text">100%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bat-side">
+        <div class="grid-title">100 клеточек = 100%. Каждая клетка — 1%</div>
+        <div class="grid100" id="bat-grid"></div>
+      </div>
+    </div>
+
+    <div class="actions" id="bat-actions"></div>
+    <div class="explain" id="bat-explain"></div>
+  </section>
+
+  <!-- ПИРОГ -->
+  <section class="screen" id="pie">
+    <button class="back" data-go="menu">← Меню</button>
+    <h2 class="screen-title">🥧 Пирог</h2>
+
+    <div class="team-size">
+      <span>Разрезать на кусков:</span>
+      <div class="chips" id="pie-sizes"></div>
+    </div>
+
+    <div class="pie-layout">
+      <svg id="pie-svg" viewBox="-110 -110 220 220" class="pie-svg"></svg>
+      <div class="pie-stats">
+        <div class="stat stat-eaten">
+          <div class="stat-label">Съедено</div>
+          <div class="stat-value" id="pie-eaten">0%</div>
+        </div>
+        <div class="stat stat-left">
+          <div class="stat-label">Осталось</div>
+          <div class="stat-value" id="pie-left">100%</div>
+        </div>
+        <p class="hint">👆 Кликай по кускам, чтобы съесть (или вернуть)</p>
+      </div>
+    </div>
+
+    <div class="explain" id="pie-explain"></div>
+    <button class="btn" id="pie-reset">🔄 Новый пирог</button>
+  </section>
+
+  <!-- ЛЫЖИ -->
+  <section class="screen" id="ski">
+    <button class="back" data-go="menu">← Меню</button>
+    <h2 class="screen-title">⛷️ Никита прошёл на лыжах</h2>
+
+    <div class="ski-track">
+      <div class="ski-flag ski-start">🏠<span>0 км</span></div>
+      <div class="ski-road">
+        <div class="ski-done" id="ski-done"></div>
+        <div class="ski-marks" id="ski-marks"></div>
+        <div class="skier" id="skier">⛷️</div>
+      </div>
+      <div class="ski-flag ski-finish">🏁<span>1500 км</span></div>
+    </div>
+
+    <div class="ski-control">
+      <label for="ski-range">Сколько процентов пути прошёл Никита?</label>
+      <input type="range" id="ski-range" min="0" max="100" step="1" value="0">
+      <div class="ski-quick" id="ski-quick"></div>
+    </div>
+
+    <div class="pie-stats ski-stats">
+      <div class="stat stat-eaten">
+        <div class="stat-label">Прошёл</div>
+        <div class="stat-value" id="ski-passed">0% = 0 км</div>
+      </div>
+      <div class="stat stat-left">
+        <div class="stat-label">Осталось</div>
+        <div class="stat-value" id="ski-left">100% = 1500 км</div>
+      </div>
+    </div>
+
+    <div class="explain" id="ski-explain"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
