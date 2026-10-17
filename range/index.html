@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тир — Percent</title>
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ТИР -->
+  <section class="screen" id="range">
+    <a class="back" href="../">← Меню</a>
+    <h2 class="screen-title">🎯 Тир: процент попаданий</h2>
+
+    <div class="team-size">
+      <span>Сложность:</span>
+      <div class="chips" id="rg-levels"></div>
+    </div>
+
+    <div class="rg-arena" id="rg-arena">
+      <div class="rg-target" id="rg-target"></div>
+      <div class="rg-overlay" id="rg-overlay">
+        <div class="rg-overlay-text" id="rg-overlay-text">20 патронов. Стреляй по мишени!</div>
+        <button class="btn" id="rg-start">▶ Начать</button>
+      </div>
+    </div>
+
+    <div class="rg-ammo" id="rg-ammo"></div>
+
+    <div class="stats-row">
+      <div class="stat stat-good">
+        <div class="stat-label">Попал</div>
+        <div class="stat-value" id="rg-hits">0</div>
+      </div>
+      <div class="stat stat-bad">
+        <div class="stat-label">Промахнулся</div>
+        <div class="stat-value" id="rg-miss">0</div>
+      </div>
+      <div class="stat stat-eaten">
+        <div class="stat-label">Точность</div>
+        <div class="stat-value" id="rg-acc">—</div>
+      </div>
+    </div>
+
+    <div class="explain" id="rg-explain"></div>
+  </section>
+
+  <script src="../common.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

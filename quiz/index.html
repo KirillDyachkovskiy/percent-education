@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Процент от числа — Percent</title>
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ПРОЦЕНТ ОТ ЧИСЛА -->
+  <section class="screen" id="quiz">
+    <a class="back" href="../">← Меню</a>
+    <h2 class="screen-title">🧮 Процент от числа</h2>
+
+    <div class="team-size">
+      <span>Уровень:</span>
+      <div class="chips" id="qz-levels"></div>
+    </div>
+
+    <div class="panel qz-box">
+      <div class="qz-question" id="qz-question"></div>
+      <div class="qz-options" id="qz-options"></div>
+      <div class="qz-feedback" id="qz-feedback"></div>
+      <button class="btn" id="qz-next" hidden>➡ Следующий пример</button>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat stat-good">
+        <div class="stat-label">Правильно</div>
+        <div class="stat-value" id="qz-right">0 из 0</div>
+      </div>
+      <div class="stat stat-eaten">
+        <div class="stat-label">Серия</div>
+        <div class="stat-value" id="qz-streak">0 🔥</div>
+      </div>
+      <div class="stat stat-left">
+        <div class="stat-label">Твой процент</div>
+        <div class="stat-value" id="qz-pct">—</div>
+      </div>
+    </div>
+
+    <div class="explain" id="qz-explain"></div>
+  </section>
+
+  <script src="../common.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

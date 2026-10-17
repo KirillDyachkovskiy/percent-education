@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Угадай процент — Percent</title>
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- УГАДАЙ ПРОЦЕНТ -->
+  <section class="screen" id="guess">
+    <a class="back" href="../">← Меню</a>
+    <h2 class="screen-title">🧩 Угадай процент</h2>
+
+    <div class="team-size">
+      <span>Клетки:</span>
+      <div class="chips" id="gs-modes"></div>
+    </div>
+
+    <div class="gs-layout">
+      <div class="gs-grid" id="gs-grid"></div>
+
+      <div class="gs-side">
+        <div class="panel">
+          <div class="gs-round" id="gs-round"></div>
+          <label for="gs-range" class="gs-label">Сколько процентов закрашено? <b id="gs-value">50%</b></label>
+          <input type="range" class="range-input" id="gs-range" min="0" max="100" step="1" value="50">
+          <div class="btn-row gs-buttons">
+            <button class="btn" id="gs-check">✅ Проверить</button>
+            <button class="btn btn-ghost" id="gs-next" disabled>➡ Дальше</button>
+          </div>
+          <div class="gs-result" id="gs-result"></div>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat stat-eaten">
+            <div class="stat-label">Очки</div>
+            <div class="stat-value" id="gs-score">0</div>
+          </div>
+          <div class="stat stat-left">
+            <div class="stat-label">Рекорд</div>
+            <div class="stat-value" id="gs-best">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="explain" id="gs-explain"></div>
+  </section>
+
+  <script src="../common.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+/* ---------- ПРОЦЕНТ ОТ ЧИСЛА ---------- */
+.qz-box { text-align: center; }
+.qz-question { font-size: clamp(36px, 8vw, 64px); font-weight: 900; margin: 10px 0 22px; }
+.qz-question b { color: var(--orange); }
+.qz-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.qz-option {
+  background: var(--panel-2);
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 10px;
+  font-size: 28px;
+  font-weight: 900;
+}
+.qz-option:hover:not(:disabled) { border-color: var(--orange); }
+.qz-option:disabled { cursor: default; }
+.qz-option.right { background: var(--green); border-color: var(--green); color: #000; }
+.qz-option.wrong { background: var(--red); border-color: var(--red); color: #fff; }
+.qz-feedback { font-size: 22px; font-weight: 800; min-height: 32px; margin-top: 18px; }
+.qz-feedback .good { color: var(--green); }
+.qz-feedback .bad { color: var(--red); }
+
+@media (max-width: 600px) {
+  .qz-options { grid-template-columns: repeat(2, 1fr); }
+}

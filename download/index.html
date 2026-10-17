@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Загрузка — Percent</title>
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ЗАГРУЗКА -->
+  <section class="screen" id="download">
+    <a class="back" href="../">← Меню</a>
+    <h2 class="screen-title">📥 Загрузка обновления</h2>
+
+    <div class="team-size">
+      <span>Интернет:</span>
+      <div class="chips" id="dl-speeds"></div>
+    </div>
+
+    <div class="panel dl-box">
+      <div class="dl-head">
+        <div class="dl-title">Standoff 2 — обновление</div>
+        <div class="dl-size">2400 МБ</div>
+      </div>
+      <div class="dl-percent" id="dl-percent">0%</div>
+      <div class="dl-bar"><div class="dl-bar-fill" id="dl-fill"></div></div>
+      <div class="dl-info">
+        <span id="dl-done">0 из 2400 МБ</span>
+        <span id="dl-eta"></span>
+      </div>
+      <div class="btn-row dl-buttons">
+        <button class="btn" id="dl-toggle">▶ Скачать</button>
+        <button class="btn btn-ghost" id="dl-reset">🔄 Заново</button>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat stat-blue">
+        <div class="stat-label">Скачано</div>
+        <div class="stat-value" id="dl-got">0 МБ</div>
+      </div>
+      <div class="stat stat-left">
+        <div class="stat-label">Осталось</div>
+        <div class="stat-value" id="dl-left">2400 МБ</div>
+      </div>
+    </div>
+
+    <div class="explain" id="dl-explain"></div>
+  </section>
+
+  <script src="../common.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

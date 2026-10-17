@@ -1,0 +1,37 @@
+/* ---------- СКИДКИ ---------- */
+.sale-layout { display: grid; grid-template-columns: 300px 1fr; gap: 20px; align-items: stretch; }
+
+.sale-card {
+  position: relative;
+  background: radial-gradient(circle at 50% 30%, #2b3a52, var(--panel));
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  padding: 28px 20px 22px;
+  text-align: center;
+}
+.sale-badge {
+  position: absolute; top: 14px; right: 14px;
+  background: var(--red);
+  color: #fff;
+  font-weight: 900;
+  font-size: 20px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  transform: rotate(6deg);
+}
+.sale-badge.hidden { visibility: hidden; }
+.sale-icon { font-size: 80px; line-height: 1.2; }
+.sale-name { font-weight: 800; font-size: 20px; margin-top: 6px; }
+.sale-old { color: var(--muted); font-size: 20px; margin-top: 10px; text-decoration: line-through; min-height: 26px; }
+.sale-new { color: var(--yellow); font-size: 40px; font-weight: 900; }
+
+.sale-control label { display: block; font-size: 20px; margin-bottom: 14px; color: var(--muted); }
+.sale-control label b { color: var(--orange); font-size: 28px; }
+.sale-quick { margin-top: 16px; }
+.sale-wallet { margin-top: 18px; font-size: 18px; line-height: 1.5; }
+.sale-wallet .ok { color: var(--green); font-weight: 800; }
+.sale-wallet .no { color: var(--red); font-weight: 800; }
+
+@media (max-width: 860px) {
+  .sale-layout { grid-template-columns: 1fr; }
+}

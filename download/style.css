@@ -1,0 +1,17 @@
+/* ---------- ЗАГРУЗКА ---------- */
+.dl-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.dl-title { font-weight: 800; font-size: 20px; }
+.dl-size { color: var(--muted); }
+.dl-percent { font-size: 72px; font-weight: 900; color: var(--blue); line-height: 1.1; margin: 10px 0; text-shadow: 0 0 24px rgba(74, 163, 255, 0.35); }
+.dl-bar { height: 24px; background: #000; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); }
+.dl-bar-fill {
+  height: 100%;
+  width: 0;
+  background: repeating-linear-gradient(45deg, var(--blue) 0 14px, #2a7fd6 14px 28px);
+  background-size: 40px 40px;
+}
+.dl-bar-fill.running { animation: dlStripes 0.8s linear infinite; }
+.dl-bar-fill.complete { background: var(--green); }
+@keyframes dlStripes { to { background-position: 40px 0; } }
+.dl-info { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; color: var(--muted); margin-top: 10px; }
+.dl-buttons { margin-top: 18px; }

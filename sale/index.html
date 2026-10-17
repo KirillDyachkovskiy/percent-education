@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Скидки — Percent</title>
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- СКИДКИ -->
+  <section class="screen" id="sale">
+    <a class="back" href="../">← Меню</a>
+    <h2 class="screen-title">🛒 Скидки в магазине</h2>
+
+    <div class="team-size">
+      <span>Выбери скин:</span>
+      <div class="chips" id="sale-items"></div>
+    </div>
+
+    <div class="sale-layout">
+      <div class="sale-card" id="sale-card">
+        <div class="sale-badge" id="sale-badge">−0%</div>
+        <div class="sale-icon" id="sale-icon">🔫</div>
+        <div class="sale-name" id="sale-name"></div>
+        <div class="sale-old" id="sale-old"></div>
+        <div class="sale-new" id="sale-new"></div>
+      </div>
+
+      <div class="panel sale-control">
+        <label for="sale-range">Скидка: <b id="sale-pct">0%</b></label>
+        <input type="range" class="range-input" id="sale-range" min="0" max="90" step="5" value="0">
+        <div class="chips sale-quick" id="sale-quick"></div>
+        <div class="sale-wallet" id="sale-wallet"></div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat stat-good">
+        <div class="stat-label">Сэкономишь</div>
+        <div class="stat-value" id="sale-save">0 G</div>
+      </div>
+      <div class="stat stat-left">
+        <div class="stat-label">Заплатишь</div>
+        <div class="stat-value" id="sale-pay">0 G</div>
+      </div>
+    </div>
+
+    <div class="explain" id="sale-explain"></div>
+  </section>
+
+  <script src="../common.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

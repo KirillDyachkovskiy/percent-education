@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кейсы — Percent</title>
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- КЕЙСЫ -->
+  <section class="screen" id="cases">
+    <a class="back" href="../">← Меню</a>
+    <h2 class="screen-title">📦 Кейсы: шансы в процентах</h2>
+
+    <div class="panel">
+      <div class="cs-drops" id="cs-drops">
+        <div class="cs-empty">Открой кейс — здесь появится, что выпало</div>
+      </div>
+      <div class="btn-row cs-buttons">
+        <button class="btn" data-open="1">📦 Открыть 1</button>
+        <button class="btn" data-open="10">📦 Открыть 10</button>
+        <button class="btn" data-open="100">📦 Открыть 100</button>
+        <button class="btn btn-ghost" id="cs-reset">🔄 Сбросить</button>
+      </div>
+    </div>
+
+    <div class="panel cs-table-wrap">
+      <table class="cs-table">
+        <thead>
+          <tr><th>Редкость</th><th>Шанс</th><th>Выпало</th><th>Доля у тебя</th></tr>
+        </thead>
+        <tbody id="cs-rows"></tbody>
+      </table>
+      <div class="cs-total" id="cs-total"></div>
+    </div>
+
+    <div class="explain" id="cs-explain"></div>
+  </section>
+
+  <script src="../common.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
