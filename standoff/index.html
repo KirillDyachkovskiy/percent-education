@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Стендофф — Percent</title>
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- СТЕНДОФФ -->
+  <section class="screen" id="standoff">
+    <a class="back" href="../">← Меню</a>
+    <h2 class="screen-title">⚔️ Стендофф: раунд на проценты</h2>
+
+    <div class="team-size">
+      <span>Врагов в команде:</span>
+      <div class="chips" id="so-sizes"></div>
+    </div>
+
+    <div class="so-arena">
+      <div class="so-player">
+        <div class="avatar avatar-ct" id="so-player-avatar">😎</div>
+        <div class="player-name">ТЫ (CT)</div>
+        <div class="kill-badge" id="so-killed">0% вражеской команды убито</div>
+      </div>
+
+      <div class="so-enemies-wrap">
+        <div class="so-hud">
+          <div class="hud-label">Вражеская команда жива</div>
+          <div class="hud-percent" id="so-alive">100%</div>
+          <div class="bar"><div class="bar-fill" id="so-bar"></div></div>
+        </div>
+        <div class="so-enemies" id="so-enemies"></div>
+        <p class="hint">👆 Кликай по врагам, чтобы их «убить»</p>
+      </div>
+
+      <div class="killfeed" id="so-feed"></div>
+    </div>
+
+    <div class="explain" id="so-explain"></div>
+    <button class="btn" id="so-reset">🔄 Новый раунд</button>
+  </section>
+
+  <script src="../common.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

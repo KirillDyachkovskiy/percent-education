@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заряд телефона — Percent</title>
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ЗАРЯД ТЕЛЕФОНА -->
+  <section class="screen" id="battery">
+    <a class="back" href="../">← Меню</a>
+    <h2 class="screen-title">🔋 Заряд телефона</h2>
+
+    <div class="bat-layout">
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="phone-status"><span>12:00</span><span id="bat-small">100%</span></div>
+          <div class="battery">
+            <div class="battery-fill" id="bat-fill"></div>
+            <div class="battery-text" id="bat-text">100%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bat-side">
+        <div class="grid-title">100 клеточек = 100%. Каждая клетка — 1%</div>
+        <div class="grid100" id="bat-grid"></div>
+      </div>
+    </div>
+
+    <div class="actions" id="bat-actions"></div>
+    <div class="explain" id="bat-explain"></div>
+  </section>
+
+  <script src="../common.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

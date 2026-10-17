@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пирог — Percent</title>
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ПИРОГ -->
+  <section class="screen" id="pie">
+    <a class="back" href="../">← Меню</a>
+    <h2 class="screen-title">🥧 Пирог</h2>
+
+    <div class="team-size">
+      <span>Разрезать на кусков:</span>
+      <div class="chips" id="pie-sizes"></div>
+    </div>
+
+    <div class="pie-layout">
+      <svg id="pie-svg" viewBox="-110 -110 220 220" class="pie-svg"></svg>
+      <div class="pie-stats">
+        <div class="stat stat-eaten">
+          <div class="stat-label">Съедено</div>
+          <div class="stat-value" id="pie-eaten">0%</div>
+        </div>
+        <div class="stat stat-left">
+          <div class="stat-label">Осталось</div>
+          <div class="stat-value" id="pie-left">100%</div>
+        </div>
+        <p class="hint">👆 Кликай по кускам, чтобы съесть (или вернуть)</p>
+      </div>
+    </div>
+
+    <div class="explain" id="pie-explain"></div>
+    <button class="btn" id="pie-reset">🔄 Новый пирог</button>
+  </section>
+
+  <script src="../common.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
