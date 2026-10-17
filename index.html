@@ -147,8 +147,15 @@
     </div>
 
     <div class="ski-control">
-      <label for="ski-range">Сколько процентов пути прошёл Никита?</label>
-      <input type="range" id="ski-range" min="0" max="100" step="1" value="0">
+      <label for="ski-range">Сколько пути прошёл Никита?</label>
+      <div class="ski-slider-row">
+        <button class="ski-arrow" data-step="-15" title="−15 км (1%)">«</button>
+        <button class="ski-arrow" data-step="-1" title="−1 км">‹</button>
+        <input type="range" id="ski-range" min="0" max="1500" step="1" value="0">
+        <button class="ski-arrow" data-step="1" title="+1 км">›</button>
+        <button class="ski-arrow" data-step="15" title="+15 км (1%)">»</button>
+      </div>
+      <div class="ski-arrow-hint">‹ › — на 1 км, « » — на 15 км (это 1%). Можно зажать.</div>
       <div class="ski-quick" id="ski-quick"></div>
     </div>
 
