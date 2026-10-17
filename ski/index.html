@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лыжи — Percent</title>
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ЛЫЖИ -->
+  <section class="screen" id="ski">
+    <a class="back" href="../">← Меню</a>
+    <h2 class="screen-title">⛷️ Никита прошёл на лыжах</h2>
+
+    <div class="ski-track">
+      <div class="ski-flag ski-start">🏠<span>0 км</span></div>
+      <div class="ski-road">
+        <div class="ski-done" id="ski-done"></div>
+        <div class="ski-marks" id="ski-marks"></div>
+        <div class="skier" id="skier">⛷️</div>
+      </div>
+      <div class="ski-flag ski-finish">🏁<span>1500 км</span></div>
+    </div>
+
+    <div class="ski-control">
+      <label for="ski-range">Сколько пути прошёл Никита?</label>
+      <div class="ski-slider-row">
+        <button class="ski-arrow" data-step="-15" title="−15 км (1%)">«</button>
+        <button class="ski-arrow" data-step="-1" title="−1 км">‹</button>
+        <input type="range" id="ski-range" min="0" max="1500" step="1" value="0">
+        <button class="ski-arrow" data-step="1" title="+1 км">›</button>
+        <button class="ski-arrow" data-step="15" title="+15 км (1%)">»</button>
+      </div>
+      <div class="ski-arrow-hint">‹ › — на 1 км, « » — на 15 км (это 1%). Можно зажать.</div>
+      <div class="ski-quick" id="ski-quick"></div>
+    </div>
+
+    <div class="pie-stats ski-stats">
+      <div class="stat stat-eaten">
+        <div class="stat-label">Прошёл</div>
+        <div class="stat-value" id="ski-passed">0% = 0 км</div>
+      </div>
+      <div class="stat stat-left">
+        <div class="stat-label">Осталось</div>
+        <div class="stat-value" id="ski-left">100% = 1500 км</div>
+      </div>
+    </div>
+
+    <div class="explain" id="ski-explain"></div>
+  </section>
+
+  <script src="../common.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

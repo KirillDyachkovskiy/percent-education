@@ -1,0 +1,11 @@
+/* ---------- ПИРОГ ---------- */
+.pie-layout { display: grid; grid-template-columns: minmax(260px, 420px) 1fr; gap: 28px; align-items: center; }
+.pie-svg { width: 100%; filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5)); }
+.slice { cursor: pointer; transition: transform 0.25s ease, opacity 0.25s; stroke: #6b3d12; stroke-width: 1.5; }
+.slice:hover { filter: brightness(1.1); }
+.slice.eaten { fill: #1a1f27 !important; stroke: #333; stroke-dasharray: 3 3; }
+
+@media (max-width: 860px) {
+  .pie-layout { grid-template-columns: 1fr; }
+  .pie-svg { max-width: 360px; margin: 0 auto; }
+}

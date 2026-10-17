@@ -1,0 +1,103 @@
+/* ---------- ЛЫЖИ ---------- */
+.ski-track {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(180deg, #1d3550, #dfe9f3 70%);
+  border-radius: 16px;
+  padding: 70px 20px 40px;
+}
+.ski-flag { font-size: 40px; text-align: center; line-height: 1; }
+.ski-flag span { display: block; font-size: 13px; font-weight: 800; color: #1a2330; margin-top: 4px; }
+.ski-road {
+  flex: 1;
+  position: relative;
+  height: 16px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.ski-done {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 0;
+  background: repeating-linear-gradient(90deg, var(--blue) 0 10px, #2a7fd6 10px 20px);
+  border-radius: 8px;
+  transition: width 0.15s;
+}
+.ski-mark {
+  position: absolute; top: -6px; bottom: -6px;
+  width: 2px; background: #1a2330;
+}
+.ski-mark span {
+  position: absolute; top: 26px; left: 50%; transform: translateX(-50%);
+  font-size: 11px; font-weight: 700; color: #1a2330; text-align: center; white-space: nowrap;
+}
+.skier {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  font-size: 48px;
+  transform: translateX(-50%) scaleX(-1);
+  transition: left 0.15s;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.35));
+}
+
+.ski-control {
+  margin-top: 20px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+.ski-control label { display: block; color: var(--muted); margin-bottom: 12px; font-size: 18px; }
+#ski-range {
+  --p: 0%;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 14px;
+  border-radius: 7px;
+  background: linear-gradient(90deg, var(--orange) var(--p), #000 var(--p));
+  border: 1px solid var(--line);
+  outline: none;
+}
+#ski-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--yellow); border: 4px solid #000; cursor: grab;
+}
+#ski-range::-moz-range-thumb {
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--yellow); border: 4px solid #000; cursor: grab;
+}
+.ski-slider-row { display: flex; align-items: center; gap: 8px; }
+.ski-slider-row #ski-range { flex: 1; min-width: 0; }
+.ski-arrow {
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  background: var(--panel-2);
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
+  user-select: none;
+  touch-action: manipulation;
+}
+.ski-arrow:hover { border-color: var(--orange); color: var(--orange); }
+.ski-arrow:active { background: var(--orange); color: #000; }
+.ski-arrow-hint { color: var(--muted); font-size: 13px; margin-top: 8px; }
+.ski-quick { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+
+.ski-stats { flex-direction: row; margin-top: 20px; }
+.ski-stats .stat { flex: 1; }
+.ski-stats .stat-value { font-size: 40px; }
+
+@media (max-width: 860px) {
+  .ski-stats { flex-direction: column; }
+  .ski-stats .stat-value { font-size: 30px; }
+  .ski-flag { font-size: 28px; }
+  .ski-slider-row { flex-wrap: wrap; }
+  .ski-slider-row #ski-range { order: -1; flex-basis: 100%; margin-bottom: 8px; }
+  .ski-arrow { flex: 1; }
+}
