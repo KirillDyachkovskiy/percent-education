@@ -19,7 +19,7 @@
   border: 4px solid;
 }
 .avatar { overflow: hidden; position: relative; }
-.sprite { width: 100%; height: 100%; object-fit: contain; transform: scale(1.15); }
+.sprite { width: 100%; height: 100%; object-fit: cover; }
 .feed-weapon { height: 18px; vertical-align: middle; margin: 0 4px; }
 .skull {
   position: absolute; inset: 0;
