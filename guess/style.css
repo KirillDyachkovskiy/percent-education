@@ -22,6 +22,9 @@
 .gs-result .good { color: var(--green); }
 .gs-result .mid { color: var(--yellow); }
 .gs-result .bad { color: var(--red); }
+.gs-answer { margin-top: 8px; font-size: 22px; }
+.gs-answer b { color: var(--green); font-size: 34px; }
+.gs-yours { color: var(--muted); font-size: 16px; font-weight: 700; }
 
 @media (max-width: 860px) {
   .gs-layout { grid-template-columns: 1fr; }

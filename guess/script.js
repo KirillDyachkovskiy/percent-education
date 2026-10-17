@@ -83,7 +83,8 @@ function gsRender() {
     const { diff, pts } = gs.last;
     const cls = diff === 0 ? "good" : diff <= 5 ? "mid" : "bad";
     const text = diff === 0 ? "🎯 В точку!" : diff <= 5 ? `👍 Почти! Ошибка ${diff}%` : `😅 Мимо на ${diff}%`;
-    result = `<span class="${cls}">${text}</span> +${pts} ${plural(pts, "очко", "очка", "очков")}`;
+    result = `<span class="${cls}">${text}</span> +${pts} ${plural(pts, "очко", "очка", "очков")}
+      <div class="gs-answer">Правильный ответ: <b>${gs.answer}%</b>${diff ? ` <span class="gs-yours">(ты сказал ${gs.last.guess}%)</span>` : ""}</div>`;
     if (gs.round === GS_ROUNDS) result += `<br>Игра окончена: ${gs.score} из ${GS_ROUNDS * 10}`;
   }
   $("gs-result").innerHTML = result;
