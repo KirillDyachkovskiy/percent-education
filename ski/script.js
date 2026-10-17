@@ -57,6 +57,8 @@ function skiUpdate() {
 
   $("ski-done").style.width = p + "%";
   $("skier").style.left = p + "%";
+  $("skier-km").style.left = p + "%";
+  $("skier-km").textContent = `${km} км`;
   $("ski-passed").textContent = `${fmt2(p)}% = ${km} км`;
   $("ski-left").textContent = `${fmt2(pLeft)}% = ${left} км`;
   $("ski-range").style.setProperty("--p", p + "%");
