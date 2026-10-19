@@ -1,4 +1,4 @@
-/* ---------- ЛЫЖИ ---------- */
+/* ---------- СНОУБОРД ---------- */
 .ski-track {
   display: flex;
   align-items: center;
@@ -41,7 +41,7 @@
   transition: left 0.15s;
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.35));
 }
-/* Плашка с пройденными км над лыжником */
+/* Плашка с пройденными км над сноубордистом */
 .skier-km {
   position: absolute;
   bottom: 70px;
